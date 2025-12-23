@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-black text-white;
+}
+
+.glass-card {
+  @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg shadow-xl;
+}
+
+.pill-button {
+  @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold transition;
+}
+
+.pill-button-primary {
+  @apply pill-button bg-gradient-to-r from-brand-pink to-brand-purple text-white shadow-neon hover:shadow-lg hover:shadow-pink-400/60;
+}
+
+.pill-button-ghost {
+  @apply pill-button bg-white/5 text-white hover:bg-white/10;
+}
+
+.section-shell {
+  @apply glass-card p-4 sm:p-5;
+}
+
+.fade-in {
+  @apply transition-all duration-200 ease-out;
+}
+
+.tagline {
+  @apply text-sm uppercase tracking-[0.3em] text-pink-300/70;
+}
+
+.watermark {
+  @apply text-xs font-semibold uppercase tracking-[0.3em] text-white/40;
+}
+
+
